@@ -1,8 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
-
-//Snack 2: L’utente inserisce due parole in successione. Il software stampa prima la parola più corta, poi la parola più lunga.
 //Snack 3: Il software deve chiedere per 10 volte all’utente di inserire un numero. Il programma stampa la somma di tutti i numeri inseriti.
 //Snack 4: Calcola la somma e la media dei numeri da 2 a 10.
 //Snack 5: Il software chiede all’utente di inserire un numero. Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
@@ -14,10 +12,10 @@ Console.WriteLine("Hello, World!");
 
 //Snack 1: L’utente inserisce due numeri in successione. Il software stampa il maggiore.
 
-Console.WriteLine("Inserisci il primo numero: ");
+Console.Write("Inserisci il primo numero: ");
 int numero1 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Inserisci il secondo numero: ");
+Console.Write("Inserisci il secondo numero: ");
 int numero2 = Convert.ToInt32(Console.ReadLine());
 
 if (numero1 > numero2)
@@ -31,3 +29,15 @@ else if (numero2 > numero1)
 else Console.WriteLine($"i due numeri sono uguali!");
 
 
+//Snack 2 : L’utente inserisce due parole in successione. Il software stampa prima la parola più corta, poi la parola più lunga.
+
+Console.Write("Inserisci una parola: ");
+string parola1 = (Console.ReadLine());
+
+Console.Write("Inserisci un'altra parola: ");
+string parola2 = (Console.ReadLine());
+
+if (parola1.Length > parola2.Length)
+{
+    Console.WriteLine($"{parola1}, {parola2}");
+} else Console.WriteLine($"{parola2}, {parola1}");
