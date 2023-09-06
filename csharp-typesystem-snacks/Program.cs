@@ -4,17 +4,48 @@ using System.Linq.Expressions;
 Console.WriteLine("Hello, World!");
 
 
-
-
-//Snack 8: Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
-//Snack 9: Crea un array vuoto e chiedi all’utente un numero da inserire nell’array. Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.
 //Snack 10: Fai inserire un numero, che chiameremo N, all’utente. Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100. Ogni volta che ne crei uno, stampalo a schermo.
 
+//Snack 9: Crea un array vuoto e chiedi all’utente un numero da inserire nell’array. Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.
+
+int[] arrayVuoto = new int[1000];
+
+int sommaNumeriVuoto = 0;
+int numeroDaSommare = 0;
+
+while (sommaNumeriVuoto <= 50)   
+{
+
+    switch (sommaNumeriVuoto += numeroDaSommare)
+    {
+
+        case > 50:
+            Console.WriteLine($"Il numero che hai inserito è troppo grande");
+            Console.Write("Inserisci un numero minore di 51: ");
+            numeroDaSommare = Convert.ToInt32(Console.ReadLine());
+        break;
+        default:
+            Console.Write("Inserisci un numero minore di 51: ");
+            numeroDaSommare = Convert.ToInt32(Console.ReadLine());
+        break;
+    }
+}
+
+Console.WriteLine();
 
 //Snack 1: L’utente inserisce due numeri in successione. Il software stampa il maggiore.
 
 Console.Write("Inserisci il primo numero: ");
 int numero1 = Convert.ToInt32(Console.ReadLine());
+
+/*
+SOLUZIONE CON DOMANDA AD OLTRANZA
+while(int.TryParse(Console.ReadLine(), out numero1)= false)
+{
+    Console.WriteLine($"Non hai inserito un numero! Riprova!");
+}
+FINE
+*/
 
 Console.Write("Inserisci il secondo numero: ");
 int numero2 = Convert.ToInt32(Console.ReadLine());
@@ -71,14 +102,14 @@ Console.WriteLine();
 
 int[] numeriDa2a10 = { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 int sommaNumeriDa2a10 = 0;
-int mediaNumeriDa2a10 = 0;
+
 
 for (int i = 0; i < numeriDa2a10.Length; i++)
 {
     sommaNumeriDa2a10 += numeriDa2a10[i];
 }
 
-mediaNumeriDa2a10 = sommaNumeriDa2a10 / numeriDa2a10.Length;
+float mediaNumeriDa2a10 = sommaNumeriDa2a10 / numeriDa2a10.Length;
 
 Console.WriteLine($"La somma dei numeri da 2 a 10 è {sommaNumeriDa2a10}, la loro media è {mediaNumeriDa2a10}");
 
@@ -146,5 +177,24 @@ for (int i = 0; i < 6; i++)
         Console.WriteLine($"il {numeroDispari} è stato aggiunto all'arrey dei numeri dispari ");
     }
 }
+
+Console.WriteLine();
+
+
+//Snack 8: Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
+
+int[] numeriInteri = { 1, 3, 1, 5, 1, 7, 1, 9, 1, 31, 1, 12, 1 };
+int sommaNumeriInteri = 0;
+
+for (int i = 0; i < numeriInteri.Length; i++)
+{
+    int posizione = i + 1;
+    if (posizione % 2 != 0)
+    {
+        sommaNumeriInteri += numeriInteri[i];
+    }
+}
+
+Console.WriteLine($"La somma dei numeri in posizione dispari è {sommaNumeriInteri}");
 
 Console.WriteLine();
