@@ -1,13 +1,17 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Linq.Expressions;
+
 Console.WriteLine("Hello, World!");
 
 
-//Snack 6: In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
+
 //Snack 7: Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
 //Snack 8: Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
 //Snack 9: Crea un array vuoto e chiedi all’utente un numero da inserire nell’array. Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.
 //Snack 10: Fai inserire un numero, che chiameremo N, all’utente. Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100. Ogni volta che ne crei uno, stampalo a schermo.
 
+//Snack 6: In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby.  
+//Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
 
 
 
@@ -98,6 +102,33 @@ else
 {
     int numeroDispari = numeroPari + 1;
     Console.WriteLine($"il numero che hai scritto è dispari, ecco il suo successivo: {numeroDispari}");
+}
+
+Console.WriteLine();
+
+string[] invitati = { "Corrado", "Giovanni", "Marco", "Paolo" };
+
+Console.Write("Inserisci il tuo nome: ");
+string tuoNome = (Console.ReadLine());
+
+bool invitato = false;
+int incremento = 0;
+while (incremento < invitati.Length)
+{
+    if (tuoNome == invitati[incremento])
+    {
+        invitato = true;
+    }
+    incremento++;
+}
+
+if (invitato == true)
+{
+    Console.WriteLine($"Benvenut* {tuoNome}, sei nella lista degli invitati.");
+}
+else
+{
+    Console.WriteLine($"Smamma {tuoNome}, non sei stato invitato!");
 }
 
 Console.WriteLine();
