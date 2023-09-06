@@ -11,7 +11,6 @@ Console.WriteLine("Hello, World!");
 //Snack 10: Fai inserire un numero, che chiameremo N, all’utente. Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100. Ogni volta che ne crei uno, stampalo a schermo.
 
 
-
 //Snack 1: L’utente inserisce due numeri in successione. Il software stampa il maggiore.
 
 Console.Write("Inserisci il primo numero: ");
@@ -64,5 +63,23 @@ for (int i = 0; i < 10; i++)
         Console.WriteLine($"Ecco la somma dei tuoi numeri: {sommaNumeri}");
     }
 }
+
+Console.WriteLine();
+
+
+//Snack 4: Calcola la somma e la media dei numeri da 2 a 10.
+
+int[] numeriDa2a10 = { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+int sommaNumeriDa2a10 = 0;
+int mediaNumeriDa2a10 = 0;
+
+for (int i = 0; i < numeriDa2a10.Length; i++)
+{
+    sommaNumeriDa2a10 += numeriDa2a10[i];
+}
+
+mediaNumeriDa2a10 = sommaNumeriDa2a10 / numeriDa2a10.Length;
+
+Console.WriteLine($"La somma dei numeri da 2 a 10 è {sommaNumeriDa2a10}, la loro media è {mediaNumeriDa2a10}");
 
 Console.WriteLine();
